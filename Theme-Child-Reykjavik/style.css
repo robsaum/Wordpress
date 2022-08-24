@@ -1,0 +1,98 @@
+/*
+ Theme Name:   Reykjavik Child Theme
+ Theme URI:    http://robsaum.com
+ Description:  Reykjavik Child Theme adds the Google Analytics and Font Awesome capabilities to the Reykjavik WordPress theme.
+ Author:       Rob Saum
+ Author URI:   http://robsaum.com
+ Template:     reykjavik
+ Version:      1.1
+ License: 	   GNU General Public License v5 or later
+ License URI:  https://www.gnu.org/licenses/gpl-3.0.html
+ Tags: 			custom-header, reykjavik
+ Text Domain: 	reykjavik
+ Notes: 	    
+*/
+
+body { font-size: 100%; }
+
+
+/* Shop Buttons */
+.btn-amazon {background-color: #FF9933; width:200px;}
+.btn-apple {background-color: #56514b; width:200px;}
+.btn-barnes {background-color: #37614b; width:200px;}
+.btn-bam {background-color: #032954; width:200px;}
+
+/* Replace Header Image */
+/* https://boundlessliving.org/wp-content/themes/reykjavik/assets/images/header/rawpixel-id-3282586.jpg' */
+.intro-special { background-image: url('/wp-content/themes/wp-reykjavik_child/assets/images/header/pixabay-colorado-1436681.png'); }
+
+/* Replace Footer Image */
+/* https://boundlessliving.org/wp-content/themes/reykjavik/assets/images/footer/rawpixel-id-3282586.jpg */
+ {
+    --custom_logo_height: 50px;
+    --color_accent: #273a7d;
+    --color_accent_text: #fefeff;
+    --color_header_background: #fefeff;
+    --color_header_text: #535354;
+    --color_header_headings: #232324;
+    --color_intro_background: #fafafb;
+    --color_intro_text: #535354;
+    --color_intro_headings: #232324;
+    --color_intro_overlay_background: #0f1732;
+    --color_intro_overlay_text: #fefeff;
+    --color_intro_overlay_opacity: 0.6;
+    --color_intro_widgets_background: #0f1732;
+    --color_intro_widgets_text: #d3d3d4;
+    --color_intro_widgets_headings: #fefeff;
+    --color_content_background: #fefeff;
+    --color_content_text: #535354;
+    --color_content_headings: #232324;
+    --color_footer_background: #0f1732;
+    --color_footer_text: #d3d3d4;
+    --color_footer_headings: #fefeff;
+    --footer_image:url("https://boundlessliving.org/wp-content/themes/wp-reykjavik_child/assets/images/footer/pixabay-colorado-1436681.png") !important;
+    --footer_image_position: 50% 50%;
+    --footer_image_size: cover;
+    --footer_image_repeat: repeat;
+    --footer_image_attachment: scroll;
+    --footer_image_opacity: 0.1;
+    --layout_width_site: 1640px;
+    --layout_width_content: 1200px;
+    --layout_width_entry_content: 720px;
+    --typography_size_html: 18px;
+    --typography_fonts_text: "Open Sans", "Helvetica Neue", "Arial", sans-serif;
+    --typography_fonts_headings: "Montserrat", "Helvetica Neue", "Arial", sans-serif;
+    --typography_fonts_logo: "Montserrat", "Helvetica Neue", "Arial", sans-serif;
+    --color_content_text--a20: rgba(83, 83, 84, 0.2);
+    --color_footer_text--a20: rgba(211, 211, 212, 0.2);
+    --color_header_text--a20: rgba(83, 83, 84, 0.2);
+    --color_intro_text--a20: rgba(83, 83, 84, 0.2);
+    --color_intro_widgets_text--a20: rgba(211, 211, 212, 0.2);
+}
+
+.site-footer:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image:url("https://boundlessliving.org/wp-content/themes/wp-reykjavik_child/assets/images/footer/pixabay-colorado-1436681.png") !important;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    opacity: 0.1;
+    background-image: var(--footer_image);
+    background-position: var(--footer_image_position);
+    background-size: var(--footer_image_size);
+    background-repeat: var(--footer_image_repeat);
+    background-attachment: var(--footer_image_attachment);
+    opacity: var(--footer_image_opacity);
+}
+
+
+/* Adjust Image Captions */
+.wp-caption,figcaption{text-transform:none; font-size: 0.80em;}
+.wp-caption{position:relative;display:inline-block;max-width:100%;padding:0;margin:0 auto 1.618em;text-align:center;background:transparent;overflow:hidden}
+.wp-caption-text{padding:1em 0 0;overflow:hidden}
+.wp-caption.aligncenter{display:block}
+
