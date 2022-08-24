@@ -1,0 +1,328 @@
+/*
+ Theme:  Alante Pro
+ Skin:   Magazine
+*/
+
+/* Services */
+#section-home .services-builder {
+	padding: 10px 10px 0;
+}
+.services-builder.style1 {
+	background: #fff;
+}
+.services-builder.style1 .iconmain .iconurl a {
+	display: inline-block;
+	color: #fff;
+	background: #8A743E;
+	padding: 3px 15px;
+	margin-top: 5px;
+}
+.services-builder.style1 .iconmain .iconurl a:hover {
+	opacity: 0.8 !important;
+	color: #fff;
+}
+
+/* Pre Header */
+#pre-header {
+	background: #000;
+	border: none;
+}
+#pre-header .header-links li a, 
+#pre-header-social li,
+#pre-header-social li a,
+#pre-header-search input {
+	color: #fff;
+}
+#pre-header .header-links .menu-hover > a,
+#pre-header .header-links > ul > li > a:hover {
+	color: #fff;
+	background: #202020;
+}
+#pre-header .header-links .sub-menu li:hover {
+	color: #fff;
+	background: #202020;
+}
+#pre-header .header-links .sub-menu {
+	background: #000;
+	border-color: #202020;
+}
+#pre-header .header-links .sub-menu a {
+	border: none;
+}
+#pre-header .header-links .sub-menu a:hover {
+	color: inherit;
+}
+#pre-header .menu > li {
+}
+#pre-header .menu > li:last-child {
+}
+#pre-header .header-links .sub-menu a {
+	padding: 10px 5px;
+}
+
+/* Header */
+#header .menu > li.current_page_item > a,
+#header .menu > li.current-menu-ancestor > a,
+#header .menu > li.menu-hover > a,
+#header .menu > li > a:hover {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	-ms-box-shadow: none;
+	-o-box-shadow: none;
+	box-shadow: none;
+}
+
+/* Intro */
+#intro.option1 {
+}
+#intro .action-shadow {
+}
+
+/* Blog */
+.blog-grid {
+	width: 50%;
+	padding: 5px 10px;
+}
+.blog-article {
+	position: relative;
+	overflow: hidden;
+	background: #fff;
+	border: none;
+	margin: 0 0 10px
+}
+.blog-article .comment {
+	float: none;
+}
+.blog-article .entry-header {
+	border: 1px solid #DDD;
+	border-bottom: none;
+}
+.blog-article .entry-header .blog-thumb {
+	margin: 0;
+}
+.blog-article .entry-content {
+	border: 1px solid #DDD;
+	border-top: none;
+}
+.blog-article .entry-footer {
+	padding: 0;
+}
+.blog-article .entry-footer .entry-meta {
+	border: 1px solid #DDD;
+	border-top: none;
+	margin: 0;
+	padding: 0 20px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.blog-article .entry-footer .entry-meta > span {
+    display: inline-block;
+    padding: 10px 15px 10px 0;
+}
+.blog-article.format-media .entry-footer .entry-meta > span.date {
+	position: absolute;
+	top: 10px;
+	right: 1px;
+	padding: 0;
+	padding: 0;
+}
+.blog-article.format-media .entry-footer .entry-meta > span.date a {
+	display: block;
+	color: #fff;
+	background: #000;
+	padding: 6px 10px;
+}
+.blog-article.format-media .entry-footer .entry-meta > span.date a:hover {
+	opacity: 0.8;
+}
+.blog-article.format-media .entry-footer .entry-meta > span.date i {
+	display: none;
+}
+.blog-article .comment a:before {
+	font-size: inherit;
+}
+.blog-article .more-link {
+	text-align: left;
+}
+.blog-article .more-link span {
+	color: #fff;
+	background: #8A743E;
+	padding: 5px 12px;
+}
+.blog-article .more-link 
+.blog-article .more-link a:hover {
+	opacity: 0.8;
+}
+.blog-article .more-link a:hover span {
+	right: 0;
+}
+.blog-article .more-link i {
+	display: none !important;
+}
+
+/* Post Navigation */
+.nav-previous a,
+.nav-next a {
+	color: #fff;
+	background: #000;
+	border-color: #000;
+}
+.nav-previous a:hover,
+.nav-next a:hover {
+	background: #000;
+}
+.nav-previous a:hover .meta-nav,
+.nav-next a:hover .meta-nav {
+}
+.nav-previous a .meta-icon,
+.nav-next a .meta-icon {
+}
+
+/* Author Bio */
+#author-bio {
+	text-align: center;
+	width: 100% !important;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;	
+}
+#author-bio img {
+}
+#author-bio h3 {
+	font-size: 18px;
+}
+#author-image {
+	margin: 0 0 10px;
+}
+#author-text {
+	width: 100% !important;
+	margin: 0 !important;
+}
+
+/* Posts & Pages */
+
+/* Pagination */
+.navigation.pagination .nav-links a,
+.navigation.pagination .nav-links span {
+}
+.navigation.pagination .nav-links .dots {
+}	
+.navigation.pagination .nav-links .dots,
+.navigation.pagination .nav-links .dots:hover {
+}
+
+/* Sidebars */
+#sidebar .widget {
+}
+#sidebar h3.widget-title {
+	color: #fff;
+	background: #000;
+	padding: 10px 10px 10px;
+}
+#sidebar h3.widget-title:after {
+	display: none;
+}
+#sidebar .widget ul {
+}
+#sidebar .widget li a {
+}
+
+#sidebar .widget_tag_cloud a {
+	border: 1px solid #DDD;
+	padding: 6px 12px;
+	margin: 0 5px 8px 0;
+}
+#sidebar .widget_tag_cloud a:hover { 
+	border-color: #000;
+}
+
+
+/* Footer */
+#footer-core h3 {
+}
+
+#sub-footer {
+	background: #000;
+	border-top: none;
+}
+#sub-footer-core {
+	color: #fff;
+}
+#sub-footer-core a {
+    color: #bbb;
+}
+#sub-footer-core a:hover {
+	color: #fff;
+}
+
+/* Responsive */
+
+/* Rob added 2019-11-15 */
+.container-fluid, .row-fluid {margin: 2px; padding:2px; background:#fff}
+.row-fluid div {margin:5px}
+.custom-html-widget {margin:5px}
+.custom-html-widget div {background:#eee; padding:15px; border-style:solid; border-width:1px; border-color:#ccc}
+.custom-html-widget h2 {background:#A29061; padding:5px; margin-top: -5px}
+figcaption {display: block;}
+
+/* Rob added 2020-01-29 */
+#phone-apps {
+	background-color: #eee;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 40px;
+}
+#phone-apps ul {
+	background-color: #eee;
+	list-style-type: none;
+}
+#phone-apps ul li {
+  float: left;
+}
+#phone-apps ul li a{
+	display: block;
+}
+.blog-title a{
+	 text-decoration: underline;
+	color: #00549a;
+}
+.textwidget p{
+	margin: 5px 10px 0 10px;
+}
+ul.nav {
+	align-content:center !important;
+	text-align:center !important;
+	font-weight:700;
+}
+.navbar-inner{
+	align-content: center !important;
+	  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav li a{
+	color:#00549a !important
+}
+.nav li a:hover{
+	background:#8A743E !important
+}
+legend {
+	font-weight:700;
+	font-size:120%
+}
+.row.display-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.row.display-flex > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}
+.row-fluid div.force-height .span3 {
+    height: 470px !important;
+}
