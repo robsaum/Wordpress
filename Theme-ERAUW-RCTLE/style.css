@@ -1,0 +1,712 @@
+/*
+ Theme Name:   RCTLE WordPress Theme 1.7
+ Text Domain:  RCTLE
+ Theme URI:    https://rctle.erau.edu
+ Description:  RCTLE WordPress Theme 
+ Author:       Robert Saum
+ Author URI:   http://robsaum.com
+ Version:      1.7
+ Requires at least: 4.7
+ Requires PHP: 5.2.4
+ License:      GNU General Public License v3 or later
+ License URI:  https://www.gnu.org/licenses/gpl-3.0.html
+ All files, unless otherwise stated, are released under the GNU General Public
+ License version 3.0 (https://www.gnu.org/licenses/gpl-3.0.html)
+ Description: Our default theme for 2020 is designed to take full advantage of the flexibility of the block editor. 
+ Organizations and businesses have the ability to create dynamic landing pages with endless layouts using the group and column blocks. 
+ Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
+*/
+
+html {
+  font-size: 62.5%; /* 62.5% of 16px = 10px */
+}
+html,body{
+    height: 100%;
+}
+body {
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+h1, h2, h3 {margin-top: 25px; }
+h1, h2, h3, h4 {font-weight: 900;}
+h1 {
+  font-size: 20px;
+  font-size: 2rem;
+}
+h2 {
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+h3 {
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+h4 {
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+.posted {
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+.navbar-brand {color: #fff !important; text-decoration: none;}
+.nav-link {
+  color: #00549a​​​ !important;
+  font-weight: 700;
+}
+
+.navbar h1 {
+  font-size: 20px;
+  font-size: 2rem;
+  letter-spacing: -1px;
+}
+
+.title-h1 {
+  font-size: 20px !important;
+  font-size: 2rem !important;
+  letter-spacing: -1px;
+}
+
+.dropdown-toggle {
+  color: #fff !important
+}
+
+.page-header h1 {
+  margin-top: 30px;
+}
+
+.page-header {
+  margin-bottom: 20px;
+}
+
+img {
+  width: auto;
+    max-width: 100%;
+    height: auto;
+  }
+
+/* Links */
+a {
+  text-decoration: underline;
+}
+a.nav-link {
+  color: #fff !important;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+a.disabled {
+  color: #999 !important;
+}
+
+.active a.nav-link {
+  color: #f0c85a !important;
+  text-decoration: none;
+}
+
+.post {
+  margin-top: 50px !important;
+  margin-bottom: 20px !important;
+}
+
+.bd-placeholder-img {
+font-size: 1.125rem;
+text-anchor: middle;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+@media (min-width: 768px) {
+.bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+.menu-item, .sub-menu {
+  z-index: 10 !important;
+}
+
+.carousel-inner, .carousel-item {
+  z-index: 3;
+}
+
+
+/* Carousel: Make the image fully responsive */
+.carousel-inner img {
+     width: 100%;
+     height: 100%;
+}
+
+.carousel-caption {font-size: 150%}
+
+.carousel-control-prev, .carousel-control-next {
+  color:#fff;
+  z-index:4 !important;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 50px;
+  width: 50px;
+  outline: black;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-image: none;
+  background-color: #000;
+}
+
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 28px;
+  color: #f0c85a;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 28px;
+  color: #f0c85a;
+}
+
+.carousel-black {
+    color: black;
+}
+
+a.carousel-control-prev, a.carousel-control-next {
+  text-decoration: none;
+}
+
+
+.category-section {
+  margin-bottom: 50px
+}
+.category-section div.card {
+  width: 80%; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.post-navigation {
+  margin-top: 50px !important;
+}
+
+main {
+  /* margin-bottom: 333px !important; */
+  min-height: calc(100vh - 300px);
+}
+
+
+
+/* FOOTER */
+footer {
+  clear: all;
+  padding-top: 1rem;
+  background-color: #333;
+  border-color: #a39161;
+  border-top: solid 5px #a39161;
+}
+
+footer p {
+  /* margin-bottom: .25rem; */
+  color: #fff;
+}
+
+.footer {
+  position: relative; /* relative to remove fixed footer and float to bottom; fixed to position on top of content at bottom of page */
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+#sub-footer {
+  background: #2e2e2e;
+  border-top: 1px solid #444;
+  /* padding: 20px 0px; 
+  margin-bottom: -10%;*/
+}
+
+#sub-footer-core
+{
+  display: inline;
+  max-width:1140px;
+  margin: 0 auto;
+  padding: 0px 10px;
+  color: #AAA;
+}
+
+@media (max-width: 880px) {
+  .footer {
+    position: relative; 
+    left:0;
+    width:100%;
+  }
+    #sub-footer-core
+  {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px 10px;
+    color: #AAA;
+  }
+}
+
+
+#sub-footer:before, #sub-footer:after { content:""; display:table;}
+#sub-footer:after { clear:both; }
+.footer-title {color:#ccc;}
+#footer-links a {color:#f0c85a !important;}
+#sub-footer-core a { color: #8FC5FF;}
+
+
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+
+.card {
+  margin: 10px;
+  padding: 10px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.text-limit {
+    width: 100%;
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.nav-item {
+  margin: 5px;
+}
+
+div.mission {
+  padding-bottom: 5px;
+  border-bottom: 2px solid #8A743E;
+}
+p.mission {
+  font-style: italic;
+}
+
+
+/* ALIGN OPTIONS */
+.alignwide, .alignfull {
+  margin: 32px calc(50% - 50vw);
+  max-width: 100vw;
+  width: 100vw;
+  position: relative;
+  padding-right:10px !important;
+  padding-bottom:7px;
+}
+
+.alignfull h1, .alignfull h2, .alignfull h3, .alignfull h4, .alignfull h5, .alignfull h6 {
+  margin-left:40px;
+}
+.alignfull p {
+  margin-left:40px;
+  margin-right:30px;
+  padding-right:5px;
+}
+.alignfull ul {
+  margin-left:40px;
+  margin-right:30px;
+  padding:5px;
+  padding-right:5px;
+}
+.alignwide img {
+  max-width: 1024px;
+}
+
+@media (max-width: 920px) {
+  .alignwide {
+    margin: 32px calc( ( 767px - 920px ) / 2 );
+    max-width: 920px;
+    width: 920px;
+  }
+  body{
+    overflow-x:hidden !important;
+  }
+}
+
+.entry-content > .alignwide {
+     max-width: 1024px;
+}
+
+.page-section div.alignfull {
+  margin: 1px !important;
+}
+
+
+
+figcaption {
+  font-size: .8em;
+  color: #666;
+}
+
+.iframe-container{
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; 
+  padding-top:30px;
+  overflow:hidden;
+
+}
+.iframe-container iframe, .iframe-container object, .iframe-container embed {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.img-thumbnail {
+  margin: 10px !important;
+}
+
+
+ /* The navigation menu */
+ nav ul {
+  padding: 0;
+    margin: 0;
+  list-style: none;
+  position: relative;
+  } 
+nav ul li {
+  display:inline-block;
+  }
+nav a {
+  display:block;
+  padding:0 3px;  
+  color:#FFF;
+  line-height: 50px; /* need for drop down to stay */
+  text-decoration:none;
+}
+nav a:hover { 
+  color: #a39161;
+}
+nav ul ul {
+  display: none;
+  position: absolute; 
+  top: 45px;  
+  background-color: #2E2E2E
+} 
+nav ul li:hover > ul {
+  display:inherit;
+  z-index: 1;
+} 
+nav ul ul li {
+  width:230px;
+  float:none;
+  display:list-item;
+  position: relative;
+}
+nav ul ul ul li {
+  position: relative;
+  top:-45px; 
+  left:230px;
+  background-color: #a39161;
+  color: #000
+}
+nav ul ul ul li a:hover {
+  color: #000
+}
+nav ul ul li {
+  border: 1px solid white;
+} 
+li > a:after { content:  ' ▼'; }
+li > a:only-child:after { content: ''; }
+
+.current-menu-item, .current_page_item a {
+  color: #a39161
+}
+
+.current-menu-item, .current_page_item ul li a {
+  color: #fff
+}
+
+p.sidebar a {
+  color: navy
+}
+
+/**** Pagination Nav ***/
+.nav-links  {
+  display: inline-block;
+  width: 100%;
+  background-color: #dddddd;
+}
+
+.nav-previous a {
+  display: block;
+  background-color: #dddddd;
+  color: blue;
+}
+.nav-previous a:hover {
+  color: navy;
+}
+.nav-next a {
+  background-color: #dddddd;
+  float: right;
+  margin-top: -50px;
+  color: blue;
+}
+.nav-next a {
+  background-color: #dddddd;
+  float: right;
+  margin-top: -50px;
+  color: blue;
+}
+.nav-next a:hover {
+  color: navy;
+}
+
+
+
+/* Styling the columns block */
+.wp-block-columns {
+  margin-bottom:0px;
+  padding-bottom:0px;
+  display: flex;
+  margin: 10px 0;
+}
+
+.wp-block-column {
+  flex: 1;
+}
+
+.wp-block-column ul {
+  list-style-type: disc;
+}
+
+.wp-block-column ul li {
+  padding: 10px;
+  margin: 0;
+}
+
+.wp-block-column ul li:nth-child(odd) {
+  background: #EFEFEF;
+}
+
+.wp-block-ht-block-toc ul li:nth-child(odd) {
+  background: #fafafa;
+}
+
+/* Fix button group alignment */
+.wp-block-column div.btn-group {
+  position:relative;
+  margin-left: 5% !important;
+}
+
+/* This is throwing off heading vertical alignment & causing content to bleed off page
+.wp-block-column:nth-child(2) {
+  transform: scale(1.08);
+}
+*/
+
+
+@media (max-width: 764px) {
+  /* Make the columns block responsive */
+   .wp-block-columns {
+      display: initial;
+  }
+
+  .wp-block-columns .wp-block-column {
+    margin: 0 0 10px;
+  }
+  
+  .wp-block-columns.has-3-columns {
+    flex-flow: row wrap;
+  }
+  
+  .has-3-columns .wp-block-column {
+    order: 2;
+  }
+
+
+  .has-3-columns .wp-block-column:nth-child(2){
+    flex-basis: 100%;
+    order: 1;
+  }
+}
+
+@media (max-width: 478px) {
+  .wp-block-columns.has-3-columns {
+    display: block;
+  }
+
+  .wp-block-column {
+    flex-basis: 100%;
+    margin: 20px 0;
+  }
+  
+  .wp-block-column:nth-child(2) {
+    transform: scale(1)
+  }
+}
+
+
+
+@media (max-width: 600px) { 
+  div.stack-on-mobile, div.stack-on-mobile > figure, div.stack-on-mobile > figure > img { width: 100%; } 
+}
+
+
+
+/* Style Category & Tag lists */
+ul.post-categories {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+ul.post-categories li {
+  float: left;
+}
+
+.post-categories li a {
+  display: block;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.post-categories li:last-child {
+  padding-right: 10px;
+}
+
+
+
+input[type=text], input[type=email], select, textarea {
+  width: 65%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+
+p label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  font-weight: 700;
+  width: 70px;
+  vertical-align: top;
+}
+
+.wpcf7-form-control-wrap input, .wpcf7-form-control-wrap select, .wpcf7-form-control-wrap textarea {
+  margin-left: 100px;
+}
+
+input.form-control {
+   padding: 20px 10px; 
+   width: 200px !important;
+   font-size: 2rem;
+}
+
+
+
+@media print {
+    p.bodyText {font-family:georgia, times, serif;}
+
+    h3#stop1::before, h3#stop2::before, h3#stop3::before, h3#stop4::before, h3#stop5::before, h3#stop6::before, h3#stop7::before, h3#stop8::before, h3#stop9::before, h3#stop10::before {
+  content: "\25A2  ";
+  }
+  
+    img {
+    display: none !important;
+    visibility: hidden !important;
+    }
+  figure {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  .mission {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  footer {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+  
+
+a {
+  color: #0054AD;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  text-align:center
+}
+.carousel-caption {
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.carousel-caption h2 {
+  font-size: 20px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* Fix Low Contrast of Bootstrap Btn */
+.btn-primary {
+  background:#00549a !important;
+  border-color: #fff;
+}
+
+.wp-block-table.is-style-stripes tbody tr:nth-child(odd) {
+  background-color: #efd6ff;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;  
+}
+
+
+.hilite {
+ background-color:#ffffcc;
+ padding:0.1em 0.2em; 
+}
+
+mark{
+ background-color:#ffffcc;
+ padding:0.1em 0.2em;
+ }
+
+a:not([href*='rctle.erau.edu']):not([href^='#']):not([href^='/']):not([href*='mailto']):not([href*='tel']):not([name]):after {
+  margin-left: 3px;
+  font-size: 1rem;
+  font-family: 'FontAwesome';
+    content: "  \f08e";
+}
+
+.wpme-cta a {
+  visibility: hidden;
+  display: none;
+}
+
+
+/* ERAU Colors:
+ERAU Web Blue: #00549a;
+ERAU Web Gold: #a39161;
+ERAU Web Yellow: #f0c85a;
+EERAU Banner Dark Blue: #00002E;
+ERAU Banner Red: #C61D23;
+*/
