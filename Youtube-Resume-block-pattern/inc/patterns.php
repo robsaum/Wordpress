@@ -1,0 +1,17 @@
+<?php 
+
+function yt_patterns() {
+    $yt_embed = "<!-- wp:group -->\n<div class=\"wp-block-group\"><!-- wp:paragraph -->\n<p>Video description</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:html -->\n<div id=\"ytplayer\"></div>\n\n<script>\n  // 2. Replace this variable value with the ID of your video\n  var theVideoID = 'M7lc1UVf-VE';\n\n  // 3. Load the IFrame Player API code asynchronously.\n  var tag = document.createElement('script');\n  tag.src = \"https://www.youtube.com/player_api\";\n  var firstScriptTag = document.getElementsByTagName('script')[0];\n  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);\n\n\n  // 4. After API downloads, replace 'ytplayer' element with IFrame\n  var player;\n  function onYouTubePlayerAPIReady() {\n      player = new YT.Player('ytplayer', {\n          height: '390',\n          width: '640',\n          videoId: theVideoID,\n          playerVars: { 'autoplay': 1, 'controls': 1,'autohide':1,'wmode':'opaque','encrypted-media':1,'allowfullscreen':1,'rel':0},\n          events: {\n              'onReady': onPlayerReady,\n              'onStateChange': onPlayerStateChange,\n          }\n      });\n  }    \n\n  // 5. When player state changes or viewer leave page, create cookie \& set left off time.\n  function onPlayerStateChange() {\n    // Stats like buffer, Pause and play store time in Cookes \n    createCookie('ply_time', player.getCurrentTime(), 1);  \n  }\n\n  document.unload = function() { createCookie('ply_time', player.getCurrentTime(), 1); }\n\n  window.onbeforeunload = function() { createCookie('ply_time', player.getCurrentTime(), 1); }\n\n  // 6. When player is ready, determine start time\n  function onPlayerReady() {\n    // On ready get cookies \& start video from left off time.\n    player.seekTo(readCookie('ply_time'));  \n  }\n\n  // 7. Create cookie function\n  function createCookie(name, value, days) {\n      if (days) {\n          var date = new Date();\n          date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));\n          var expires = \"; expires=\" + date.toGMTString();\n      } else\n          var expires = \"\";\n          document.cookie = name + \"=\" + value + expires + \"; path=/\";\n  }\n\n  // 8. Read cookie\n  function readCookie(name) {\n      var nameEQ = name + \"=\";\n      var ca = document.cookie.split(';');\n      for (var i = 0; i < ca.length; i++) {\n          var c = ca[i];\n          while (c.charAt(0) == ' ')\n              c = c.substring(1, c.length);\n          if (c.indexOf(nameEQ) == 0)\n              return c.substring(nameEQ.length, c.length);\n      }\n      return null;\n  }\n\n  // 9. Erase cookie\n  function eraseCookie(name) { createCookie(name, \"\", -1); }\n</script>\n<!-- /wp:html -->\n\n<!-- wp:separator -->\n<hr class=\"wp-block-separator\"/>\n<!-- /wp:separator -->\n\n<!-- wp:heading {\"level\":3} -->\n<h3 id=\"content\">Content</h3>\n<!-- /wp:heading -->\n\n<!-- wp:list -->\n<ul><li>Time (s)</li><li>Time (s)</li></ul>\n<!-- /wp:list --></div>\n<!-- /wp:group -->";
+    
+    register_block_pattern( 
+        'block-patterns/yt-embed',
+        array( 
+            'title' => __( "YouTube Resume Embed", 'yt-bp' ),
+            'description' => _x( 'A block that embeds a YouTube player that sets a cookie to capture the timecode and lets a viewer resume from where they left off.', 'yt-bp' ),
+            'content' => $yt_embed,
+            'categories' => array( 'videos' ),
+        )
+    );
+}
+
+add_action( 'init', 'yt_patterns' );

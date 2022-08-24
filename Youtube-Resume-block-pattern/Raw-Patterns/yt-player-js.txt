@@ -1,0 +1,92 @@
+<!-- wp:group -->
+<div class="wp-block-group"><!-- wp:paragraph -->
+<p>Video description</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:html -->
+<div id="ytplayer"></div>
+
+<script>
+  // 2. Replace this variable value with the ID of your video
+  var theVideoID = 'M7lc1UVf-VE';
+
+  // 3. Load the IFrame Player API code asynchronously.
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/player_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+
+  // 4. After API downloads, replace 'ytplayer' element with IFrame
+  var player;
+  function onYouTubePlayerAPIReady() {
+      player = new YT.Player('ytplayer', {
+          height: '390',
+          width: '640',
+          videoId: theVideoID,
+          playerVars: { 'autoplay': 1, 'controls': 1,'autohide':1,'wmode':'opaque','encrypted-media':1,'allowfullscreen':1,'rel':0},
+          events: {
+              'onReady': onPlayerReady,
+              'onStateChange': onPlayerStateChange,
+          }
+      });
+  }    
+
+  // 5. When player state changes or viewer leave page, create cookie & set left off time.
+  function onPlayerStateChange() {
+    // Stats like buffer, Pause and play store time in Cookes 
+    createCookie('ply_time', player.getCurrentTime(), 1);  
+  }
+
+  document.unload = function() { createCookie('ply_time', player.getCurrentTime(), 1); }
+
+  window.onbeforeunload = function() { createCookie('ply_time', player.getCurrentTime(), 1); }
+
+  // 6. When player is ready, determine start time
+  function onPlayerReady() {
+    // On ready get cookies & start video from left off time.
+    player.seekTo(readCookie('ply_time'));  
+  }
+
+  // 7. Create cookie function
+  function createCookie(name, value, days) {
+      if (days) {
+          var date = new Date();
+          date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+          var expires = "; expires=" + date.toGMTString();
+      } else
+          var expires = "";
+          document.cookie = name + "=" + value + expires + "; path=/";
+  }
+
+  // 8. Read cookie
+  function readCookie(name) {
+      var nameEQ = name + "=";
+      var ca = document.cookie.split(';');
+      for (var i = 0; i < ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) == ' ')
+              c = c.substring(1, c.length);
+          if (c.indexOf(nameEQ) == 0)
+              return c.substring(nameEQ.length, c.length);
+      }
+      return null;
+  }
+
+  // 9. Erase cookie
+  function eraseCookie(name) { createCookie(name, "", -1); }
+</script>
+<!-- /wp:html -->
+
+<!-- wp:separator -->
+<hr class="wp-block-separator"/>
+<!-- /wp:separator -->
+
+<!-- wp:heading {"level":3} -->
+<h3 id="content">Content</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Time (s)</li><li>Time (s)</li></ul>
+<!-- /wp:list --></div>
+<!-- /wp:group -->
