@@ -15,15 +15,14 @@ function my_theme_enqueue_styles() {
 // Add Google Analytics to header
 function blli_google_analytics() { ?>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-217855727-1"></script> -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VZ9K6SFPS0"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-SLZC8B2KH8"></script>
 	<script>
 	  window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', 'G-VZ9K6SFPS0');
-        /* gtag('config', 'UA-217855727-1'); */
+        gtag('config', 'G-SLZC8B2KH8');
+        /* gtag('config', 'G-VZ9K6SFPS0'); gtag('config', 'UA-217855727-1'); */
 	</script>
     <?php
 }      
